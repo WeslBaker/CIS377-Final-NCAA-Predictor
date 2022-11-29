@@ -15,7 +15,7 @@ from predictor import df
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
 def get_svm_metrics(train_x, train_y, test_x, test_y):
-    svm = SVC(kernel='poly')
+    svm = SVC(kernel='linear')
     svm.fit(train_x, train_y)
 
     # use the SVM to predict on the test data
